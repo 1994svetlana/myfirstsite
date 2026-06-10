@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+
+:root {
+    --bs--bg_li: #b266ff;
+    --bs--color_a: #1a1a1a (9, 9, 100, 0.716);
+    --bs--top: 80px
+}
+
+@import './header.scss';
+@import './mixin.scss';
+
+
+.nkar {
+
+    height: 100vh;
+    width: 100%;
+    background: url('./photo_2026-06-06_02-37-17.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+
+    @include tablet {
+        height: 70vh;
+        background-size: 100% 100%;
+
+    }
+
+    @include tabletmini {
+        height: 59vh;
+        background-size: 100% 100%;
+        margin-top: 90px;
+
+    }
+
+    @include mobile {
+        height: 36vh;
+        background-size: 100% 100%;
+
+    }
+}
+
+#about {
+    width: 100%;
+    height: auto;
+    border: solid;
+    background: #1a1a1a;
+    padding: 50px 20px;
+
+
+    .about-left {
+        color: #b266ff;
+        text-align: center;
+        padding: 30px;
+
+        .about-left h2,
+        h3 {
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+        }
+    }
+
+    .about-right h2 {
+        text-align: center;
+        padding: 15px;
+        color: grey;
+
+
+
+    }
+
+    .about-right p {
+
+        color: gray;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 18px;
+    }
+
+    @include tabletmini {
+        padding: 20px;
+    }
+
+}
+
+
+
+#skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    height: auto;
+    width: 100%;
+    padding: 50px 20px;
+
+
+    @include tabletmini {
+        padding: 20px;
+    }
+
+
+}
+
+#skills h2 {
+
+    text-align: center;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+
+    .skill-card {
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #b266ff;
+        transition: .4s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px #b266ff;
+    }
+
+    .skill-card h3 {
+        color: #b266ff;
+        margin-bottom: 10px;
+    }
+
+    .skill-card p {
+        color: gray;
+    }
+
+}
+
+#projects {
+    height: auto;
+    background: #1a1a1a;
+
+    @include tabletmini {
+        padding: 20px;
+    }
+
+    padding: 50px 20px;
+
+
+}
+
+#projects h2 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    color: gray;
+}
+
+#contact {
+    text-align: center;
+    gap: 20px;
+
+    background: #1a1a1a;
+    padding: 50px 20px;
+
+    h2,
+    p {
+        color: gray;
+    }
+
+    @include tabletmini {
+        padding: 20px;
+    }
+
+}
